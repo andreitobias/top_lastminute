@@ -1,0 +1,25 @@
+
+<!--==============================slider=================================-->	
+		<div class="slider_wrapper">
+			<div id="camera_wrap" class="">
+				<% @offers.each do |offer| %>
+					<div data-src="images/zakynthos.jpg" alt="zakynthos"> <!--user input image with paperclip-->
+						<div class="caption fadeIn">
+							<h2><%= offer.destination %></h2><!--user input destination, number of nights, using devise forms-->
+							<div class="price">
+								<span><%= offer.price %></span><!--user input price, using devise forms-->
+							</div>
+							<div class="extra_wrapper">
+								<p><%= offer.description %></p><!--user input-->
+							</div>	
+						</div>		 	
+					</div>
+				<% end %>  
+				
+			</div>
+		</div>
+		
+<!--==============================Content=================================-->
+
+
+
