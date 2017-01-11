@@ -2,8 +2,19 @@
 <!--==============================slider=================================-->	
 		<div class="slider_wrapper">
 			<div id="camera_wrap" class="">
+				
+			
 				<% @offers.each do |offer| %>
-					<div data-src="images/zakynthos.jpg" alt="zakynthos"> <!--user input image with paperclip-->
+				
+					<% case %> 
+						<% when offer.destination == "Peru" %>
+							<div data-src="images/zakynthos.jpg" alt="zakynthos"> <!--user input image with paperclip-->
+						<% when offer.destination == "Cluj" %>
+							<div data-src="images/bodrum.jpg" alt="zakynthos">
+						<% else %> 
+							 <div data-src="images/corfu.jpg" alt="zakynthos">
+					<% end %>
+					
 						<div class="caption fadeIn">
 							<h2><%= offer.destination %></h2><!--user input destination, number of nights, using devise forms-->
 							<div class="price">
@@ -11,11 +22,14 @@
 							</div>
 							<div class="extra_wrapper">
 								<p><%= offer.description %></p><!--user input-->
-							</div>	
+							</div>
+							<div class="extra_wrapper">
+								<p><%= offer.transport %></p><!--user input-->
+							</div>
+							<div class="btn"><%= link_to 'VEZI OFERTA!', offer.link %></div>
 						</div>		 	
 					</div>
-				<% end %>  
-				
+				<% end %>
 			</div>
 		</div>
 		

@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   resources :users do
     resource :profile
   end
+  
+  resources :offers
   get '/galerie' => 'pages#galerie'
   get '/contact' => 'pages#contact'
   root 'offers#index'
