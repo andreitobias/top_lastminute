@@ -13,10 +13,5 @@
  *= require_tree .
  *= require_self
  */
-@import "bootstrap-sprockets";
-@import "bootstrap";
-@import "reset.css";
-@import "skeleton.css";
-@import "font-awesome.css";
-@import "superfish.css";
-@import "style.scss";
+@import "font-awesome-sprockets";
+@import "font-awesome";
